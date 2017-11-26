@@ -33,5 +33,10 @@ namespace DSLibrary.Abstracts
         /// <param name="after">Value of the node which we are inserting before</param>
         /// <param name="data">value of the node</param>
         public abstract void InsertAfter(T after, T data);
+
+        /// <summary>
+        /// Display all the nodes
+        /// </summary>
+        public abstract void Display();
     }
 }

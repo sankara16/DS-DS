@@ -61,5 +61,10 @@ namespace DSLibrary.LinkedLists
         {
             throw new NotImplementedException();
         }
+
+        public override void Display()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
