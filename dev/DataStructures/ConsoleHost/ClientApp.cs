@@ -32,6 +32,7 @@ namespace ConsoleHost
             circularLinkedlist.AddFirst(5);
             circularLinkedlist.InsertAfter(5, 8);
             circularLinkedlist.InsertBefore(8, 6);
+            circularLinkedlist.Delete(6);
             circularLinkedlist.Display();
 
             Console.Read();

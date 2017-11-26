@@ -134,5 +134,32 @@ namespace DSLibrary.LinkedLists
 
             return null;
         }
+
+        /// <summary>
+        /// Delete the node from the list
+        /// </summary>
+        /// <param name="data">value of the node</param>
+        public override void Delete(T data)
+        {
+            SingleLinkedNode<T> current = this.Head;
+
+            bool itemFound = false;
+            while (current.Next != null)
+            {
+                if (current.Next.Data.Equals(data))
+                {
+                    itemFound = true;
+                    current.Next = current.Next.Next;
+                    break;
+                }
+
+                current = current.Next;
+            }
+
+            if (!itemFound)
+            {
+                throw new Exception("Node not found");
+            }
+        }
     }
 }

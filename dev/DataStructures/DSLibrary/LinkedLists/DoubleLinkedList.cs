@@ -7,7 +7,7 @@ namespace DSLibrary.LinkedLists
     using System;
 
     /// <summary>
-    /// 
+    /// Class for double linked list
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class DoubleLinkedList<T> : AbstractLinkedList<T>
@@ -126,6 +126,23 @@ namespace DSLibrary.LinkedLists
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Delete the node from the list
+        /// </summary>
+        /// <param name="data">value of the node</param>
+        public override void Delete(T data)
+        {
+            DoubleLinkedNode<T> itemToBeDeleted = this.FindNode(data);
+
+            if (itemToBeDeleted == null)
+            {
+                throw new ArgumentNullException("Item not found");
+            }
+
+            itemToBeDeleted.Previous.Next = itemToBeDeleted.Previous.Next.Next;
+            itemToBeDeleted.Next.Previous = itemToBeDeleted.Next.Previous.Previous;
         }
     }
 }

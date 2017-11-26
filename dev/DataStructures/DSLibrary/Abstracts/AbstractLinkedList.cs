@@ -35,6 +35,12 @@ namespace DSLibrary.Abstracts
         public abstract void InsertAfter(T after, T data);
 
         /// <summary>
+        /// Delete the node from the list
+        /// </summary>
+        /// <param name="data">value of the node</param>
+        public abstract void Delete(T data);
+
+        /// <summary>
         /// Display all the nodes
         /// </summary>
         public abstract void Display();
