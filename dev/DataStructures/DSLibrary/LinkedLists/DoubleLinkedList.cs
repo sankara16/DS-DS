@@ -18,7 +18,7 @@ namespace DSLibrary.LinkedLists
         public DoubleLinkedNode<T> Head { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DoubleLinkedList{T}{T}"/> class.
+        /// Initializes a new instance of the <see cref="DoubleLinkedList{T}"/> class.
         /// </summary>
         public DoubleLinkedList()
         {
@@ -31,7 +31,14 @@ namespace DSLibrary.LinkedLists
         /// <param name="data"></param>
         public override void AddFirst(T data)
         {
-            throw new NotImplementedException();
+            DoubleLinkedNode<T> newNode = new DoubleLinkedNode<T>(data);
+
+            if (this.Head.Next != null)
+            {
+                newNode.Next = this.Head.Next;
+            }
+
+            this.Head.Next = newNode;
         }
 
         /// <summary>
@@ -40,7 +47,18 @@ namespace DSLibrary.LinkedLists
         /// <param name="data"></param>
         public override void AddLast(T data)
         {
-            throw new NotImplementedException();
+            // Create a node with the data
+            DoubleLinkedNode<T> newNode = new DoubleLinkedNode<T>(data);
+
+            // Traverse till the end
+            DoubleLinkedNode<T> current = this.Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+
+            current.Next = newNode;
+            newNode.Previous = current;
         }
 
         /// <summary>
@@ -50,7 +68,13 @@ namespace DSLibrary.LinkedLists
         /// <param name="data">value of the node</param>
         public override void InsertAfter(T after, T data)
         {
-            throw new NotImplementedException();
+            DoubleLinkedNode<T> newNode = new DoubleLinkedNode<T>(data);
+
+            DoubleLinkedNode<T> nodeAfter = this.FindNode(after);
+            newNode.Next = nodeAfter.Next;
+            newNode.Previous = nodeAfter;
+            nodeAfter.Next.Previous = newNode;
+            nodeAfter.Next = newNode;
         }
 
         /// <summary>
@@ -60,12 +84,48 @@ namespace DSLibrary.LinkedLists
         /// <param name="data">value of the node</param>
         public override void InsertBefore(T before, T data)
         {
-            throw new NotImplementedException();
+            DoubleLinkedNode<T> newNode = new DoubleLinkedNode<T>(data);
+
+            DoubleLinkedNode<T> nodeBefore = this.FindNode(before);
+            newNode.Next = nodeBefore;
+            newNode.Previous = nodeBefore.Previous;
+            nodeBefore.Previous.Next = newNode;
+            nodeBefore.Previous = newNode;            
         }
 
+        /// <summary>
+        ///  Display all the nodes
+        /// </summary>
         public override void Display()
         {
-            throw new NotImplementedException();
+            DoubleLinkedNode<T> current = this.Head.Next;
+
+            while (current != null)
+            {
+                Console.Write("{0}\t", current.Data.ToString());
+                current = current.Next;
+            }
+        }
+
+        /// <summary>
+        /// Find the element
+        /// </summary>
+        /// <param name="data">an element to find</param>
+        /// <returns>Target node</returns>
+        private DoubleLinkedNode<T> FindNode(T data)
+        {
+            DoubleLinkedNode<T> current = this.Head.Next;
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                {
+                    return current;
+                }
+
+                current = current.Next;
+            }
+
+            return null;
         }
     }
 }

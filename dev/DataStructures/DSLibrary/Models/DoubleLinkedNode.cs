@@ -10,17 +10,17 @@ namespace DSLibrary.Models
         /// <summary>
         /// Node value
         /// </summary>
-        private T Data { get; set; }
+        public T Data { get; set; }
 
         /// <summary>
         /// Double linked list next pointer
         /// </summary>
-        private DoubleLinkedNode<T> Next { get; set; }
+        public DoubleLinkedNode<T> Next { get; set; }
 
         /// <summary>
         /// Double linked list previous pointer
         /// </summary>
-        private DoubleLinkedNode<T> Previous { get; set; }
+        public DoubleLinkedNode<T> Previous { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DoubleLinkedNode{T}"/> class.
