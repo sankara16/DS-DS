@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DynamicProgramming\" />
+    <Folder Include="BackTracking\" />
+    <Folder Include="DivideAndConquer\" />
+    <Folder Include="Greedy\" />
+    <Folder Include="BruteForce\" />
+    <Folder Include="Randomized\" />
+    <Folder Include="Recursive\" />
+  </ItemGroup>
+
+</Project>
