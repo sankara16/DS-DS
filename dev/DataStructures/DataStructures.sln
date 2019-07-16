@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSLibrary", "DSLibrary\DSLibrary.csproj", "{5CCA0D9D-6EC1-4743-960F-792504B6117D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\ConsoleHost.csproj", "{75566BB0-107D-44A4-B068-F2F1EAE43E14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSTestProj", "DSTestProj\DSTestProj.csproj", "{6703605A-D5B5-4429-B47C-3F59B1F49370}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5CCA0D9D-6EC1-4743-960F-792504B6117D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CCA0D9D-6EC1-4743-960F-792504B6117D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CCA0D9D-6EC1-4743-960F-792504B6117D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75566BB0-107D-44A4-B068-F2F1EAE43E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75566BB0-107D-44A4-B068-F2F1EAE43E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75566BB0-107D-44A4-B068-F2F1EAE43E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75566BB0-107D-44A4-B068-F2F1EAE43E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6703605A-D5B5-4429-B47C-3F59B1F49370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6703605A-D5B5-4429-B47C-3F59B1F49370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6703605A-D5B5-4429-B47C-3F59B1F49370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6703605A-D5B5-4429-B47C-3F59B1F49370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
