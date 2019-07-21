@@ -1,5 +1,7 @@
 ﻿using System;
 using DSLibrary.LinkedLists;
+using DSLibrary.Queue;
+using DSLibrary.Stack;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DSTestProj
@@ -48,6 +50,34 @@ namespace DSTestProj
             //circularLinkedlist.Display();
 
             Assert.IsTrue(circularLinkedlist.Head.Next.Data == 5);
+        }
+
+        [TestMethod]
+        public void TestStack()
+        {
+            Stack<int> stack = new Stack<int>();
+
+            stack.Push(20);
+            stack.Push(10);
+            stack.Push(8);
+
+            int res = stack.Pop();
+
+            Assert.IsTrue(res == 8);
+        }
+        
+        [TestMethod]
+        public void TestQueue()
+        {
+            Queue<int> queue = new Queue<int>();
+
+            queue.Enqueue(20);
+            queue.Enqueue(10);
+            queue.Enqueue(8);
+            queue.DeQueue();
+            queue.DeQueue();
+
+            Assert.IsTrue(queue.Peek() == 8);
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BinaryTree\" />
+    <Folder Include="Graph\" />
+    <Folder Include="PriorityQueue\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DSLibrary\DSLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
