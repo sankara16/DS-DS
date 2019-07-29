@@ -65,7 +65,7 @@ namespace DSTestProj
 
             Assert.IsTrue(res == 8);
         }
-        
+
         [TestMethod]
         public void TestQueue()
         {
@@ -78,6 +78,20 @@ namespace DSTestProj
             queue.DeQueue();
 
             Assert.IsTrue(queue.Peek() == 8);
+        }
+
+        [TestMethod]
+        public void TestStringCompare()
+        {
+            string str1 = "Sankara";
+            string str2 = "Sankarae";
+            string str3 = "Sankara";
+
+            bool val1 = string.Compare(str1, str2) < 0;
+            bool val2 = string.Compare(str2, str1) > 0;
+            bool val3 = string.Compare(str1, str3) == 0;
+
+            Assert.IsTrue(val3);
         }
     }
 }

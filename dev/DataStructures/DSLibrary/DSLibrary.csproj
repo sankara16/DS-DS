@@ -46,6 +46,8 @@
     <Compile Include="Abstracts\AbstractQueue.cs" />
     <Compile Include="Abstracts\AbstractStack.cs" />
     <Compile Include="Abstracts\AbstractTree.cs" />
+    <Compile Include="Interfaces\ISearch.cs" />
+    <Compile Include="Interfaces\ISort.cs" />
     <Compile Include="LinkedLists\CircularLinkedList.cs" />
     <Compile Include="LinkedLists\DoubleLinkedList.cs" />
     <Compile Include="LinkedLists\SingleLinkedList.cs" />
@@ -55,10 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\PriorityQueue.cs" />
     <Compile Include="Queue\Queue.cs" />
+    <Compile Include="Sort\BubbleSort.cs" />
     <Compile Include="Stack\Stack.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
