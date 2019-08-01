@@ -5,13 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DynamicProgramming\" />
     <Folder Include="BackTracking\" />
     <Folder Include="DivideAndConquer\" />
-    <Folder Include="Greedy\" />
     <Folder Include="BruteForce\" />
     <Folder Include="Randomized\" />
     <Folder Include="Recursive\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DSLibrary\DSLibrary.csproj" />
   </ItemGroup>
 
 </Project>

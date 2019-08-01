@@ -60,6 +60,10 @@
       <Project>{5CCA0D9D-6EC1-4743-960F-792504B6117D}</Project>
       <Name>DSLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DSQuestions\DSQuestions.csproj">
+      <Project>{1F0C1DD7-45D1-4D6E-AC24-D5ABB04AD7C9}</Project>
+      <Name>DSQuestions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
