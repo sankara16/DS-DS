@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DSLibrary.Graph;
 using DSLibrary.LinkedLists;
 using DSLibrary.Models;
@@ -9,6 +10,8 @@ using DSLibrary.Stack;
 using DSLibrary.Tree;
 using DSQuestions.DynamicProgramming;
 using DSQuestions.Greedy;
+using DSQuestions.Hashing;
+using DSQuestions.Randomized;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DSTestProj
@@ -17,6 +20,7 @@ namespace DSTestProj
     public class TestClient
     {
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestSingleLinkedList()
         {
             SingleLinkedList<int> singleLinkedList = new SingleLinkedList<int>();
@@ -31,6 +35,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestDoubleLinkedList()
         {
             DoubleLinkedList<int> doubleLinkedList = new DoubleLinkedList<int>();
@@ -45,6 +50,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestCircularLinkedList()
         {
             CircularLinkedList<int> circularLinkedlist = new CircularLinkedList<int>();
@@ -60,6 +66,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestStack()
         {
             DSLibrary.Stack.Stack<int> stack = new DSLibrary.Stack.Stack<int>();
@@ -74,6 +81,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestQueue()
         {
             DSLibrary.Queue.Queue<int> queue = new DSLibrary.Queue.Queue<int>();
@@ -88,6 +96,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSCore")]
         public void TestGraph()
         {
             int verticesCount = 5;
@@ -152,6 +161,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("Test")]
         public void TestStringCompare()
         {
             string str1 = "Sankara";
@@ -166,6 +176,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("DSQuestions-Greedy")]
         public void ActivitySelectionProblem()
         {
             List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>();
@@ -187,6 +198,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("Algorithms")]
         public void TestHuffmanCodingProblem()
         {
             HuffmanTree hfmTree = new HuffmanTree();
@@ -202,6 +214,7 @@ namespace DSTestProj
         }
 
         [TestMethod]
+        [TestCategory("Algorithms")]
         public void TestKnapsackProblem()
         {
             //int[] value = { 10, 50, 70};
@@ -220,6 +233,52 @@ namespace DSTestProj
             //int result = DPAlgos.KnapsackProblem(capacity, weight, value, itemCount);
 
             Assert.IsTrue(result == 80);
+        }
+
+        [TestMethod]
+        [TestCategory("DSQuestions-Array")]
+        public void TestFindPairWithGivenSumInAnArray()
+        {
+            int[] arr = { 8, 7, 2, 5, 3, 1 };
+
+            var result = HashAlgos.FindPairWithGivenSumInAnArray(arr, 10);
+
+            Assert.IsTrue(result.Count == 2);
+        }
+
+        [TestMethod]
+        [TestCategory("DSQuestions-Array")]
+        public void TestFindSubArrayWithGivenSum()
+        {
+            int[] arr = { 15, 2, 4, 8, 9, 5, 10, 23 };
+            int sum = 23;
+
+            var result = RandomAlgos.FindSubArrayWithGivenSum(arr, sum);
+
+            Assert.IsTrue(result.Count == 2);
+        }
+
+        [TestMethod]
+        [TestCategory("DSQuestions-Array")]
+        public void TestSortBinaryArrayInLinearTime()
+        {
+            int[] array = { 1, 0, 1, 0, 1, 0, 0, 1};
+            int[] output = { 0, 0, 0, 0, 1, 1, 1, 1 };
+
+            var result = RandomAlgos.SortBinaryArrayInLinearTime(array);
+
+            Assert.IsTrue(result.SequenceEqual(output));
+        }
+
+        [TestMethod]
+        [TestCategory("DSQuestions-Array")]
+        public void TestFindDuplicateElementInLimitedRangeArray()
+        {
+            int[] array = { 1, 2, 3, 4, 5, 3};
+
+            int result = RandomAlgos.FindDuplicateElementInimitedRangeArray(array);
+
+            Assert.IsTrue(result == 3);
         }
     }
 }

@@ -56,6 +56,7 @@
     <Compile Include="Models\Edge.cs" />
     <Compile Include="Models\HuffmanNode.cs" />
     <Compile Include="Models\KnapsackItem.cs" />
+    <Compile Include="Models\Pair.cs" />
     <Compile Include="Models\PriorityQueueItem.cs" />
     <Compile Include="Models\SingleLinkedNode.cs" />
     <Compile Include="Models\Vertex.cs" />

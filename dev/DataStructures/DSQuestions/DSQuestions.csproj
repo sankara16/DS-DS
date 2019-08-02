@@ -8,7 +8,6 @@
     <Folder Include="BackTracking\" />
     <Folder Include="DivideAndConquer\" />
     <Folder Include="BruteForce\" />
-    <Folder Include="Randomized\" />
     <Folder Include="Recursive\" />
   </ItemGroup>
 
